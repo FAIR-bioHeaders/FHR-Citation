@@ -47,7 +47,7 @@ Wright, A., Wilkinson, M. D., Mungall, C., Cain, S., Richards, S., Sternberg, P.
 Or in bibtex:
 ```bibtex
 % Citation For FHR Pre-print
-@article {Wright2023.11.29.569306,
+@article {Wright2023,
 	author = {Adam Wright and Mark D Wilkinson and Chris Mungall and Scott Cain and Stephen Richards and Paul Sternberg and Ellen Provin and Jonathan L Jacobs and Scott Geib and Daniela Raciti and Karen Yook and Lincoln Stein and David C Molik},
 	title = {DATA RESOURCES AND ANALYSES FAIR Header Reference genome: A TRUSTworthy standard},
 	elocation-id = {2023.11.29.569306},
