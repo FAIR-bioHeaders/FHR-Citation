@@ -20,7 +20,7 @@ Or in bibtex:
 }
 ```
 
-The APA citation for the [FHR specification]({https://github.com/FAIR-bioHeaders/FHR-Specification) is:
+The APA citation for the [FHR specification](https://github.com/FAIR-bioHeaders/FHR-Specification) is:
 
 ```
 Molik, D., & Wright, A.  FHR Specification [Data set]. https://github.com/FAIR-bioHeaders/FHR-Specification
