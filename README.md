@@ -1,6 +1,9 @@
 # FHR-Citation
 Information on Citations of FHR
 
+
+## Citing the Validation Tool
+cite the validation tool when directly interacting with the tool or library
 The APA citation for the [FHR validation/converter software](https://github.com/FAIR-bioHeaders/FHR-File-Converter) is:
 
 ```
@@ -19,7 +22,8 @@ Or in bibtex:
     doi = {10.5281/zenodo.6762547}
 }
 ```
-
+## Citing the Specification itself
+cite the specification when directly interacting with the specification (pull requests, comments on schema)
 The APA citation for the [FHR specification](https://github.com/FAIR-bioHeaders/FHR-Specification) is:
 
 ```
@@ -37,7 +41,8 @@ Or in bibtex:
     doi = {10.5281/zenodo.6762549}
 }
 ```
-
+## Citing the Preprint
+**(best option)** cite the preprint talking about the effort, or want a broad citation of FHR
 The APA citation for the [FHR preprint](https://www.biorxiv.org/content/10.1101/2023.11.29.569306v1) is:
 
 ```
