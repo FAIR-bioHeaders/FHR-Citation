@@ -30,3 +30,24 @@ from the historical deposited specification authorship.
 
 Verification: all three CFF files validate against CFF 1.2.0; citation.bib parses
 with its four distinct entries when nonstandard software entries are enabled.
+
+## Files and coordinated pull requests
+
+| Repository | Audited citation files | Implementation PR |
+| --- | --- | --- |
+| FHR-Specification | README.md; CITATION.cff | [#28](https://github.com/FAIR-bioHeaders/FHR-Specification/pull/28) |
+| FHR-File-Converter | README.md; CITATION.cff | [#19](https://github.com/FAIR-bioHeaders/FHR-File-Converter/pull/19) |
+| FHR-Citation | README.md; citation.bib; CITATION.cff | [#2](https://github.com/FAIR-bioHeaders/FHR-Citation/pull/2) |
+| FHT-Specification | README.md | [#1](https://github.com/FAIR-bioHeaders/FHT-Specification/pull/1) |
+| FHT-File-Converter | README.md | [#1](https://github.com/FAIR-bioHeaders/FHT-File-Converter/pull/1) |
+| fair-bioheaders.github.io | _publications/2024-05-31-title-number1.md | [#3](https://github.com/FAIR-bioHeaders/fair-bioheaders.github.io/pull/3) |
+| .github | profile/README.md | No affected citations |
+| gff-schema | README.md and tracked text documentation | No affected citations |
+
+The concept DOIs intentionally identify evolving specification/software resources;
+they are not version-specific v0.3 archive identifiers. No new v0.3 DOI is claimed.
+The historical preprint remains machine-readable metadata, rather than replacing
+the preferred published article. FHT resources without independently verified DOIs
+retain repository links; the FHR citations identify related resources.
+
+Completion of specification issue #25 requires all six implementation PRs to merge.
