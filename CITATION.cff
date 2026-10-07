@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: Please cite the published paper for general FHR use.
+title: FHR Citation
+authors:
+- given-names: David
+  family-names: Molik
+- given-names: Adam
+  family-names: Wright
+preferred-citation:
+  type: article
+  title: 'FAIR Header Reference genome: a TRUSTworthy standard'
+  authors:
+  - given-names: Adam
+    family-names: Wright
+  - given-names: Mark D
+    family-names: Wilkinson
+  - given-names: Christopher
+    family-names: Mungall
+  - given-names: Scott
+    family-names: Cain
+  - given-names: Stephen
+    family-names: Richards
+  - given-names: Paul
+    family-names: Sternberg
+  - given-names: Ellen
+    family-names: Provin
+  - given-names: Jonathan L
+    family-names: Jacobs
+  - given-names: Scott
+    family-names: Geib
+  - given-names: Daniela
+    family-names: Raciti
+  - given-names: Karen
+    family-names: Yook
+  - given-names: Lincoln
+    family-names: Stein
+  - given-names: David C
+    family-names: Molik
+  doi: 10.1093/bib/bbae122
+  journal: Briefings in Bioinformatics
+  volume: '25'
+  issue: '3'
+  start: bbae122
+  year: 2024
