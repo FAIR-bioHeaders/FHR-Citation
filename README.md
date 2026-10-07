@@ -1,68 +1,46 @@
-# FHR-Citation
-Information on Citations of FHR
+# FHR Citation
 
+Canonical citation metadata for FHR. Use the published paper for general FHR
+citations, and the specification/software DOI for direct use of those resources.
+This repository supports the coordinated v0.3 documentation release.
 
-## Citing the Validation Tool
-cite the validation tool when directly interacting with the tool or library
-The APA citation for the [FHR validation/converter software](https://github.com/FAIR-bioHeaders/FHR-File-Converter) is:
+[Download citation.bib](citation.bib) or copy the Chicago bibliography entries below.
+Existing BibTeX keys are preserved. The preprint remains available as a historical
+resource; prefer the published paper when describing the standard.
 
-```
-Molik, D., & Wright, A. FHR File Converter [Computer software]. https://github.com/FAIR-bioHeaders/FHR-File-Converter
-```
+## Citing FHR
 
-Or in bibtex:
-```bibtex
-% Citation For FHR Validation/Converter Software
-@software{FHR_File_Converter,
-    author = {Molik, David and Wright, Adam},
-    year = {2023},
-    license = {PDDL-1.0},
-    title = {{FHR File Converster}},
-    url = {https://github.com/FAIR-bioHeaders/FHR-File-Converter},
-    doi = {10.5281/zenodo.6762547}
-}
-```
-## Citing the Specification itself
-cite the specification when directly interacting with the specification (pull requests, comments on schema)
-The APA citation for the [FHR specification](https://github.com/FAIR-bioHeaders/FHR-Specification) is:
+Chicago bibliography entries are used below. Cite the published paper for a
+general description of FHR; cite the specification or converter when using that
+resource directly. The software and specification links are concept DOIs; for a
+specific release, use the corresponding version DOI from Zenodo. Authors and
+years follow the records resolved by the concept DOIs at the v0.3 documentation
+update, and can change as later records are published.
 
-```
-Molik, D., & Wright, A.  FHR Specification [Data set]. https://github.com/FAIR-bioHeaders/FHR-Specification
-```
+### Published paper
 
-Or in bibtex:
-```bibtex
-% Citation For FHR Specification
-@misc{FHR_Specification,
-    author = {Molik, David and Wright, Adam},
-    year = {2023},
-    title = {{FHR Specification}},
-    url = {https://github.com/FAIR-bioHeaders/FHR-Specification},
-    doi = {10.5281/zenodo.6762549}
-}
-```
-## Citing the Article
-**(best option)** cite the article talking about the effort, or want a broad citation of FHR
-The APA citation for the [FHR Article](https://doi.org/10.1093/bib/bbae122) is:
+Wright, Adam, Mark D. Wilkinson, Christopher Mungall, Scott Cain, Stephen Richards, Paul Sternberg, Ellen Provin, Jonathan L. Jacobs, Scott Geib, Daniela Raciti, Karen Yook, Lincoln Stein, and David C. Molik. “FAIR Header Reference Genome: A TRUSTworthy Standard.” *Briefings in Bioinformatics* 25, no. 3 (2024): bbae122. https://doi.org/10.1093/bib/bbae122.
 
-```
-Adam Wright, Mark D Wilkinson, Christopher Mungall, Scott Cain, Stephen Richards, Paul Sternberg, Ellen Provin, Jonathan L Jacobs, Scott Geib, Daniela Raciti, Karen Yook, Lincoln Stein, David C Molik, FAIR Header Reference genome: a TRUSTworthy standard, Briefings in Bioinformatics, Volume 25, Issue 3, May 2024, bbae122, https://doi.org/10.1093/bib/bbae122
-```
+### Specification
 
-Or in bibtex:
-```bibtex
-% Citation For FHR Article
-@article{Wright2024,
-  title = {FAIR Header Reference genome: a TRUSTworthy standard},
-  volume = {25},
-  ISSN = {1477-4054},
-  url = {http://dx.doi.org/10.1093/bib/bbae122},
-  DOI = {10.1093/bib/bbae122},
-  number = {3},
-  journal = {Briefings in Bioinformatics},
-  publisher = {Oxford University Press (OUP)},
-  author = {Wright,  Adam and Wilkinson,  Mark D and Mungall,  Christopher and Cain,  Scott and Richards,  Stephen and Sternberg,  Paul and Provin,  Ellen and Jacobs,  Jonathan L and Geib,  Scott and Raciti,  Daniela and Yook,  Karen and Stein,  Lincoln and Molik,  David C},
-  year = {2024},
-  month = mar
-}
-```
+Molik, David. *FHR Specification*. Data set. 2022. https://doi.org/10.5281/zenodo.6762549.
+
+### Converter
+
+Molik, David, and Adam Wright. *FHR File Converter*. Computer software. 2024. https://doi.org/10.5281/zenodo.6762547.
+
+Machine-readable entries are maintained in
+[FHR-Citation](https://github.com/FAIR-bioHeaders/FHR-Citation/blob/main/citation.bib).
+
+## Citation metadata audit
+
+The concept DOIs are preserved. Their currently resolved records identify the
+converter as a 2024 resource by David Molik and Adam Wright, and the specification
+as a 2022 resource by David Molik. The older copied 2023/two-author specification
+citations were corrected to those records. This does not redefine project authorship.
+For exact release provenance, select a version DOI from the Zenodo record rather
+than assuming a concept DOI identifies a fixed version.
+
+The published paper uses article identifier `bbae122`, volume 25, issue 3. Its
+citation year is 2024; the print issue date and online publication date differ.
+The software title spelling and specification repository URL have been corrected.
