@@ -7,7 +7,7 @@ cite the validation tool when directly interacting with the tool or library
 The APA citation for the [FHR validation/converter software](https://github.com/FAIR-bioHeaders/FHR-File-Converter) is:
 
 ```
-Molik, D., & Wright, A. FHR File Converster [Computer software]. https://github.com/FAIR-bioHeaders/FHR-File-Converter
+Molik, D., & Wright, A. FHR File Converter [Computer software]. https://github.com/FAIR-bioHeaders/FHR-File-Converter
 ```
 
 Or in bibtex:
