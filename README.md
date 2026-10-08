@@ -23,21 +23,21 @@ Wright, Adam, Mark D. Wilkinson, Christopher Mungall, Scott Cain, Stephen Richar
 
 ### Specification
 
-Molik, David. *FHR Specification*. Data set. 2022. https://doi.org/10.5281/zenodo.6762549.
+Molik, David, and Adam Wright. *FHR Specification*. Data set. 2026. https://doi.org/10.5281/zenodo.6762549.
 
 ### Converter
 
-Molik, David, and Adam Wright. *FHR File Converter*. Computer software. 2024. https://doi.org/10.5281/zenodo.6762547.
+Molik, David, and Adam Wright. *FHR File Converter*. Computer software. 2026. https://doi.org/10.5281/zenodo.6762547.
 
 Machine-readable entries are maintained in
 [FHR-Citation](https://github.com/FAIR-bioHeaders/FHR-Citation/blob/main/citation.bib).
 
 ## Citation metadata audit
 
-The concept DOIs are preserved. Their currently resolved records identify the
-converter as a 2024 resource by David Molik and Adam Wright, and the specification
-as a 2022 resource by David Molik. The older copied 2023/two-author specification
-citations were corrected to those records. This does not redefine project authorship.
+The concept DOIs are preserved. Before the v0.3.0 deposit they resolved to records
+identifying the converter as a 2024 resource by David Molik and Adam Wright, and the
+specification as a 2022 resource by David Molik; both now resolve to the 2026 v0.3.0
+records by David Molik and Adam Wright, which the entries above follow. This does not redefine project authorship.
 For exact release provenance, select a version DOI from the Zenodo record rather
 than assuming a concept DOI identifies a fixed version.
 
