@@ -50,4 +50,12 @@ The historical preprint remains machine-readable metadata, rather than replacing
 the preferred published article. FHT resources without independently verified DOIs
 retain repository links; the FHR citations identify related resources.
 
-Completion of specification issue #25 requires all six implementation PRs to merge.
+The six implementation PRs listed above have merged.
+
+## v0.3.0 archives
+
+The coordinated v0.3.0 release was deposited on 2026-10-07 with creators David Molik
+and Adam Wright: specification version DOI 10.5281/zenodo.23224136 and converter
+version DOI 10.5281/zenodo.23224137. Both concept DOIs above now resolve to these
+records. Use the version DOIs to cite the exact v0.3.0 archives; reporting-contact
+updates made on main after the tag are not included in them.
