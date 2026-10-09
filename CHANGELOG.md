@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Document the MPL-2.0 transition for new project contributions from March 2025 onward, preserve historical permissions and third-party notices, and align README/package/citation licensing. No runtime behavior changes.
+
 ## v0.3 — 2026-10-07 (from v0.2)
 
 - Add optional structured assembly software, assembly protocol URI, N90, GC-content

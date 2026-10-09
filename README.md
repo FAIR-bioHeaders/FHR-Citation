@@ -44,3 +44,9 @@ than assuming a concept DOI identifies a fixed version.
 The published paper uses article identifier `bbae122`, volume 25, issue 3. Its
 citation year is 2024; the print issue date and online publication date differ.
 The software title spelling and specification repository URL have been corrected.
+
+## Licensing
+
+[![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-blue.svg)](LICENSE)
+
+New project contributions from March 2025 onward use [MPL-2.0](LICENSE). David Molik left USDA in February 2025. Historical USDA public-domain material remains public domain within the United States; its original notice is preserved in LICENSE. Previously granted permissions and third-party terms remain intact. The project includes both historical material and subsequent MPL-2.0 contributions; file notices and history identify provenance.
