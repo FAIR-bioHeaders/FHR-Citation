@@ -47,8 +47,27 @@ for implementing an existing contract. Never rewrite immutable releases, fixed
 schema aliases or existing file-bound headers as incidental cleanup. Header edits
 require checksum recomputation and may affect downstream parent links.
 
-Proposals are not adopted contracts: FAIR-bioHeaders-Specification#139 / draft
-PR #140 (structured vouchers) and profiles still under review in that repository
-(#56) remain proposals until adopted. Implemented subsets do not establish full
-profile or header-family support. The mapping page in fair-bioheaders.github.io#29
-depends on approved profiles.
+Check the adoption decision and released support before implementing a proposal;
+an issue or PR's existence does not establish adoption. Structured vouchers
+(FAIR-bioHeaders-Specification#139/#140) and mapping profiles (#56 in that same
+repository) have their own review history. Implemented subsets do not establish
+full profile or header-family support. The mapping page tracked in
+fair-bioheaders.github.io#29 depends on approved profiles. Recheck these records
+rather than relying on a copied description of their temporary status.
+
+## Citation verification and consumer updates
+
+For changes to `citation.bib`, parse it with a named BibTeX parser and check the
+rendered ordinary citation with a stated compatible tool/style; record versions
+and any unsupported entry types. This repository currently defines no automated
+citation-test command, so do not claim a parser/render test merely from reading
+the file. Check braces/case preservation, corporate authors, Unicode/TeX escaping,
+DOIs and stable entry keys. Plain Markdown/link checks do not validate BibTeX.
+
+Reconcile human-readable README entries and machine-readable records against the
+same cited sources. A repository/package rename does not rename a registered
+bibliographic title or change its DOI/creator order. Website citation records live
+in `_data/references.yml` in fair-bioheaders.github.io and render/export through
+its reference include and citation JavaScript. Link a companion update when a
+verified citation changes; do not assume this repository automatically propagates
+there, or replace website data without checking its current resource identities.
