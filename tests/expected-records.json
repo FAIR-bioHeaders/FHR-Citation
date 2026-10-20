@@ -1,0 +1,48 @@
+{
+  "provenance": "Observed maintained records and README at base revision 5d1491c3b88ca504551693f444ce85de63d6b9f3. This is an offline consistency baseline, not a live metadata authority. Changes require source review, not automatic regeneration.",
+  "records": {
+    "FHR_File_Converter": {
+      "fields": {
+        "ENTRYTYPE": "software",
+        "title": "{FHR File Converter}",
+        "author": "Molik, David and Wright, Adam",
+        "year": "2026",
+        "doi": "10.5281/zenodo.6762547"
+      },
+      "readme_citation": "Molik, David, and Adam Wright. *FHR File Converter*. Computer software. 2026. https://doi.org/10.5281/zenodo.6762547."
+    },
+    "FHR_Specification": {
+      "fields": {
+        "ENTRYTYPE": "misc",
+        "title": "{FHR Specification}",
+        "author": "Molik, David and Wright, Adam",
+        "year": "2026",
+        "doi": "10.5281/zenodo.6762549"
+      },
+      "readme_citation": "Molik, David, and Adam Wright. *FHR Specification*. Data set. 2026. https://doi.org/10.5281/zenodo.6762549."
+    },
+    "Wright2023.11.29.569306": {
+      "fields": {
+        "ENTRYTYPE": "article",
+        "title": "DATA RESOURCES AND ANALYSES FAIR Header Reference genome: A TRUSTworthy standard",
+        "author": "Adam Wright and Mark D Wilkinson and Chris Mungall and Scott Cain and Stephen Richards and Paul Sternberg and Ellen Provin and Jonathan L Jacobs and Scott Geib and Daniela Raciti and Karen Yook and Lincoln Stein and David C Molik",
+        "year": "2023",
+        "doi": "10.1101/2023.11.29.569306"
+      }
+    },
+    "Wright2024": {
+      "fields": {
+        "ENTRYTYPE": "article",
+        "title": "FAIR Header Reference genome: a TRUSTworthy standard",
+        "author": "Wright,  Adam and Wilkinson,  Mark D and Mungall,  Christopher and Cain,  Scott and Richards,  Stephen and Sternberg,  Paul and Provin,  Ellen and Jacobs,  Jonathan L and Geib,  Scott and Raciti,  Daniela and Yook,  Karen and Stein,  Lincoln and Molik,  David C",
+        "year": "2024",
+        "doi": "10.1093/bib/bbae122"
+      },
+      "readme_citation": "Wright, Adam, Mark D. Wilkinson, Christopher Mungall, Scott Cain, Stephen Richards, Paul Sternberg, Ellen Provin, Jonathan L. Jacobs, Scott Geib, Daniela Raciti, Karen Yook, Lincoln Stein, and David C. Molik. “FAIR Header Reference Genome: A TRUSTworthy Standard.” *Briefings in Bioinformatics* 25, no. 3 (2024): bbae122. https://doi.org/10.1093/bib/bbae122."
+    }
+  },
+  "known_discrepancies": [
+    "The converter BibTeX record retains PDDL-1.0 while current project contributions use MPL-2.0; review release-specific license provenance before changing the record.",
+    "The converter BibTeX URL uses the historical FHR-File-Converter repository name; verify intended citation destination separately."
+  ]
+}

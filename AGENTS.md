@@ -59,9 +59,8 @@ rather than relying on a copied description of their temporary status.
 
 For changes to `citation.bib`, parse it with a named BibTeX parser and check the
 rendered ordinary citation with a stated compatible tool/style; record versions
-and any unsupported entry types. This repository currently defines no automated
-citation-test command, so do not claim a parser/render test merely from reading
-the file. Check braces/case preservation, corporate authors, Unicode/TeX escaping,
+and any unsupported entry types. Run the parser/consistency checks documented in README; rendering remains a
+separate unimplemented lane, so a parser success is not a render test. Check braces/case preservation, corporate authors, Unicode/TeX escaping,
 DOIs and stable entry keys. Plain Markdown/link checks do not validate BibTeX.
 
 Reconcile human-readable README entries and machine-readable records against the
@@ -71,3 +70,14 @@ in `_data/references.yml` in fair-bioheaders.github.io and render/export through
 its reference include and citation JavaScript. Link a companion update when a
 verified citation changes; do not assume this repository automatically propagates
 there, or replace website data without checking its current resource identities.
+
+## CI commands and boundaries
+
+Use Python 3.13 and `requirements-ci.txt`. Run `python -m unittest discover -s
+tests -v` (one command), `python scripts/check_citations.py`, and
+`python scripts/check_docs.py AGENTS.md README.md`. Markdown lint is configured
+in `.markdownlint.json`; README gives the pinned CLI command. The offline record
+manifest is reviewed evidence, not a substitute for checking authoritative sources
+when metadata changes. Do not refresh it to conceal drift or silence the known
+license/URL review notes. Preserve source BibTeX values; renderer/remote checks are
+still follow-ups in #8. CI runs on documentation-only changes too.

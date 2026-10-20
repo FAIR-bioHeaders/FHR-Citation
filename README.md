@@ -50,3 +50,55 @@ The software title spelling and specification repository URL have been corrected
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-blue.svg)](LICENSE)
 
 New project contributions from March 2025 onward use [MPL-2.0](LICENSE). David Molik left USDA in February 2025. Historical USDA public-domain material remains public domain within the United States; its original notice is preserved in LICENSE. Previously granted permissions and third-party terms remain intact. The project includes both historical material and subsequent MPL-2.0 contributions; file notices and history identify provenance.
+
+## Automated checks
+
+Pull requests, pushes to `main` and manual runs execute **Citation records** and
+**Markdown lint**. The workflow uses Python 3.13, pinned parser dependencies and
+read-only permissions. It does not publish releases or change records.
+
+```sh
+python -m pip install -r requirements-ci.txt
+python -m unittest discover -s tests -v
+python scripts/check_citations.py
+python scripts/check_docs.py AGENTS.md README.md
+npx markdownlint-cli2@0.23.2 AGENTS.md README.md
+```
+
+The citation checker uses bibtexparser 1.4.3 with nonstandard types enabled, so
+`@software` is retained. It rejects duplicate citation keys, unparsed malformed
+entries, missing required fields for the supported article/misc/software types,
+invalid years and resolver-prefixed DOI fields. Tests exercise corporate authors,
+Unicode, protected titles and TeX escapes without normalizing the source file.
+These required fields describe this repository's maintained records, not every
+valid BibTeX bibliography.
+
+`tests/expected-records.json` is an explicit offline consistency baseline for
+entry types, keys, titles, ordered authors, years and DOIs, plus the maintained
+README citation lines. Review a changed field against authoritative records,
+then update both representations and the baseline deliberately; do not regenerate
+the baseline simply to hide a failure. This verifies consistency, not independent
+bibliographic truth or live DOI metadata. The preprint remains historical.
+
+The checker reports the converter's existing PDDL-1.0 field and historical
+repository URL for separate provenance review. They are not automatically changed
+or treated as proof that all current contributions share that license.
+
+Local Markdown checks cover whitespace, conflict markers and inline/reference
+file targets, including images. They do not check URL availability, HTML links,
+anchors or general Markdown semantics. Markdown lint covers the two owned files. Line length is unrestricted and bare
+URLs are allowed to preserve the existing human-readable bibliography layout.
+
+### Remaining validation and website handoff
+
+This is the parser/consistency stage of #8. **No bibliography rendering or
+style compatibility is claimed.** A later rendering lane must choose and pin a
+compatible tool/style; classic BibTeX may not support `@software` without a
+reviewed fallback, while a BibLaTeX profile has different capabilities. Remote
+DOI/link checks remain a separate scheduled/manual follow-up and must distinguish
+service failures from record errors. Keep #8 open for that delivery review.
+
+Verified citation changes may need a companion update to website
+`_data/references.yml` and its citation tests. The website has its own resource
+scope and historical-title rules; these checks neither fetch it nor assume that
+its records must match every entry here byte-for-byte.
