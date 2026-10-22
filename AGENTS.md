@@ -79,8 +79,9 @@ tests -v` (one command), `python scripts/check_citations.py`, and
 in `.markdownlint.json`; README gives the pinned CLI command. The offline record
 manifest is reviewed evidence, not a substitute for checking authoritative sources
 when metadata changes. Do not refresh it to conceal drift or silence the known
-license/URL review notes. Preserve source BibTeX values; renderer/remote checks are
-still follow-ups in #8. CI runs on documentation-only changes too.
+license/URL review notes. Preserve source BibTeX values; #8 delivered the offline
+citation/documentation CI slice (PR #9, closed 2026-10-20); rendered-citation
+and remote DOI checks remain unimplemented follow-ups. CI runs on documentation-only changes too.
 
 ## Issue, project and code-review behavior
 
