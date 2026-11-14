@@ -42,7 +42,6 @@
     }
   },
   "known_discrepancies": [
-    "The converter BibTeX record retains PDDL-1.0 while current project contributions use MPL-2.0; review release-specific license provenance before changing the record.",
-    "The converter BibTeX URL uses the historical FHR-File-Converter repository name; verify intended citation destination separately."
+    "The converter BibTeX record retains PDDL-1.0 while current project contributions use MPL-2.0; review release-specific license provenance before changing the record."
   ]
 }
