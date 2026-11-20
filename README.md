@@ -84,7 +84,8 @@ records. It does not normalize or write the source. `check_consistency(records,
 manifest, readme)` raises on baseline drift. The CLI accepts `--bib PATH` and
 `--readme PATH`, exits 1 for its documented validation failures, and prints the
 remaining provenance notes on success. `scripts/check_docs.py` checks local
-Markdown targets and whitespace; it does not contact remote services. These are
+Markdown targets and whitespace (exit 1 on validation/read failure, exit 2 for
+non-Markdown arguments); it does not contact remote services. These are
 maintenance helpers, not a supported citation-rendering API. Empty bibliographies
 are rejected. Recovery detection intentionally depends on bibtexparser 1.4.3 and
 pyparsing 3.2.3 internals; the existing malformed-entry controls must pass before
@@ -98,7 +99,7 @@ address CI/review findings, and a human performs the merge.
 Pull requests, pushes to `main` and manual runs execute **Citation records** and
 **Markdown lint**. The workflow uses Python 3.13, pinned parser dependencies and
 read-only permissions. It does not publish releases or change records. Installing
-the tools uses the network; the validation logic itself is offline. The pinned
+the tools uses the network; the validation logic itself is offline. As verified against its pinned package manifest on 2026-11-20,
 markdownlint action v24.2.0 bundles CLI 0.23.2.
 
 ```sh
@@ -130,8 +131,8 @@ or treated as proof that all current contributions share that license.
 
 Local Markdown checks cover whitespace, conflict markers and inline/reference
 file targets, including images. They do not check URL availability, HTML links,
-anchors or general Markdown semantics. Nested parentheses/brackets and multiline
-Markdown destinations are outside its simple link-pattern support. Markdown lint covers the two owned files. Line length is unrestricted and bare
+anchors or general Markdown semantics. The `check_docs.py` helper does not handle nested parentheses/brackets or
+multiline Markdown destinations. Markdown lint covers the two owned files. Line length is unrestricted and bare
 URLs are allowed to preserve the existing human-readable bibliography layout.
 
 ### Remaining validation and website handoff
