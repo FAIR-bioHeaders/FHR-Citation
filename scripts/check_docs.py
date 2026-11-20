@@ -41,8 +41,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("paths", nargs="+", type=Path)
     args = parser.parse_args()
-    root = Path.cwd()
-    errors = [e for path in args.paths for e in check_file(path, root)]
+    root = Path(__file__).resolve().parents[1]
+    for path in args.paths:
+        if path.suffix.lower() not in {".md", ".markdown"}:
+            parser.error(f"expected a Markdown file: {path}")
+    try:
+        errors = [e for path in args.paths for e in check_file(path, root)]
+    except (OSError, UnicodeError, ValueError) as exc:
+        parser.exit(1, f"Documentation check failed: {exc}\n")
     for error in errors:
         print(error)
     if errors:

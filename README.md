@@ -1,8 +1,9 @@
 # FHR Citation
 
-Canonical citation metadata for FHR. Use the published paper for general FHR
+Citation metadata for the FHR paper and FAIR BioHeaders specification/software. Use the published paper for general FHR
 citations, and the specification/software DOI for direct use of those resources.
-This repository supports the coordinated v0.3 documentation release.
+The v0.3 documentation release is historical; current maintenance preserves
+registered bibliographic identities and stable entry keys.
 
 [Download citation.bib](citation.bib) or copy the Chicago bibliography entries below.
 Existing BibTeX keys are preserved. The preprint remains available as a historical
@@ -65,11 +66,40 @@ this title correction.
 
 New project contributions from March 2025 onward use [MPL-2.0](LICENSE). David Molik left USDA in February 2025. Historical USDA public-domain material remains public domain within the United States; its original notice is preserved in LICENSE. Previously granted permissions and third-party terms remain intact. The project includes both historical material and subsequent MPL-2.0 contributions; file notices and history identify provenance.
 
+## Setup and maintainer API
+
+Use Python 3.13 and an isolated environment. No runtime package is shipped; the checks install only the pinned parser stack. From a clean clone:
+
+```sh
+git clone https://github.com/FAIR-bioHeaders/FHR-Citation.git
+cd FHR-Citation
+python3.13 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements-ci.txt
+```
+
+`parse_records(text)` in `scripts/check_citations.py` returns a dictionary keyed
+by stable BibTeX ID and raises `ValueError` for malformed/duplicate/unsupported
+records. It does not normalize or write the source. `check_consistency(records,
+manifest, readme)` raises on baseline drift. The CLI accepts `--bib PATH` and
+`--readme PATH`, exits 1 for its documented validation failures, and prints the
+remaining provenance notes on success. `scripts/check_docs.py` checks local
+Markdown targets and whitespace; it does not contact remote services. These are
+maintenance helpers, not a supported citation-rendering API. Empty bibliographies
+are rejected. Recovery detection intentionally depends on bibtexparser 1.4.3 and
+pyparsing 3.2.3 internals; the existing malformed-entry controls must pass before
+upgrading either.
+
+Run the checks below after edits. Another actual model reviews every PR, agents
+address CI/review findings, and a human performs the merge.
+
 ## Automated checks
 
 Pull requests, pushes to `main` and manual runs execute **Citation records** and
 **Markdown lint**. The workflow uses Python 3.13, pinned parser dependencies and
-read-only permissions. It does not publish releases or change records.
+read-only permissions. It does not publish releases or change records. Installing
+the tools uses the network; the validation logic itself is offline. The pinned
+markdownlint action v24.2.0 bundles CLI 0.23.2.
 
 ```sh
 python -m pip install -r requirements-ci.txt
@@ -100,7 +130,8 @@ or treated as proof that all current contributions share that license.
 
 Local Markdown checks cover whitespace, conflict markers and inline/reference
 file targets, including images. They do not check URL availability, HTML links,
-anchors or general Markdown semantics. Markdown lint covers the two owned files. Line length is unrestricted and bare
+anchors or general Markdown semantics. Nested parentheses/brackets and multiline
+Markdown destinations are outside its simple link-pattern support. Markdown lint covers the two owned files. Line length is unrestricted and bare
 URLs are allowed to preserve the existing human-readable bibliography layout.
 
 ### Remaining validation and website handoff
@@ -110,7 +141,8 @@ style compatibility is claimed.** A later rendering lane must choose and pin a
 compatible tool/style; classic BibTeX may not support `@software` without a
 reviewed fallback, while a BibLaTeX profile has different capabilities. Remote
 DOI/link checks remain a separate scheduled/manual follow-up and must distinguish
-service failures from record errors. Keep #8 open for that delivery review.
+service failures from record errors. #8 closed after the offline slice; these limitations remain explicitly outside
+that delivered scope and are not represented as tested.
 
 Verified citation changes may need a companion update to website
 `_data/references.yml` and its citation tests. The website has its own resource
