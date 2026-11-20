@@ -1,5 +1,5 @@
 {
-  "provenance": "Observed maintained records and README at base revision 5d1491c3b88ca504551693f444ce85de63d6b9f3. This is an offline consistency baseline, not a live metadata authority. Changes require source review, not automatic regeneration.",
+  "provenance": "Observed maintained records and README at base revision 5d1491c3b88ca504551693f444ce85de63d6b9f3. This is an offline consistency baseline, not a live metadata authority. Changes require source review, not automatic regeneration. On 2026-11-20 the specification concept title was checked against DataCite DOI 10.5281/zenodo.6762549; creator order and year are unchanged. Toolkit concept DOI 10.5281/zenodo.6762547 still registers FHR File Converter and is preserved, distinct from version DOI 10.5281/zenodo.24387470.",
   "records": {
     "FHR_File_Converter": {
       "fields": {
@@ -14,12 +14,12 @@
     "FHR_Specification": {
       "fields": {
         "ENTRYTYPE": "misc",
-        "title": "{FHR Specification}",
+        "title": "{FAIR-bioHeaders Specification}",
         "author": "Molik, David and Wright, Adam",
         "year": "2026",
         "doi": "10.5281/zenodo.6762549"
       },
-      "readme_citation": "Molik, David, and Adam Wright. *FHR Specification*. Data set. 2026. https://doi.org/10.5281/zenodo.6762549."
+      "readme_citation": "Molik, David, and Adam Wright. *FAIR-bioHeaders Specification*. Data set. 2026. https://doi.org/10.5281/zenodo.6762549."
     },
     "Wright2023.11.29.569306": {
       "fields": {

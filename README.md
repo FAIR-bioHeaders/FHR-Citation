@@ -23,7 +23,7 @@ Wright, Adam, Mark D. Wilkinson, Christopher Mungall, Scott Cain, Stephen Richar
 
 ### Specification
 
-Molik, David, and Adam Wright. *FHR Specification*. Data set. 2026. https://doi.org/10.5281/zenodo.6762549.
+Molik, David, and Adam Wright. *FAIR-bioHeaders Specification*. Data set. 2026. https://doi.org/10.5281/zenodo.6762549.
 
 ### Converter
 
@@ -44,6 +44,20 @@ than assuming a concept DOI identifies a fixed version.
 The published paper uses article identifier `bbae122`, volume 25, issue 3. Its
 citation year is 2024; the print issue date and online publication date differ.
 The software title spelling and specification repository URL have been corrected.
+
+On November 20, 2026, the registered DataCite concept records were checked
+again: [specification concept metadata](https://api.datacite.org/dois/10.5281/zenodo.6762549)
+names *FAIR-bioHeaders Specification*, while
+[toolkit concept metadata](https://api.datacite.org/dois/10.5281/zenodo.6762547)
+still names *FHR File Converter*. Both retain David Molik then Adam Wright.
+The concept citations above follow those registered titles. The
+[toolkit 0.13.1 version metadata](https://api.datacite.org/dois/10.5281/zenodo.24387470)
+also retains *FHR File Converter*. The current repository/product name does
+not by itself rename a registered bibliographic title. The website's release and citation metadata
+are maintained separately in its
+[publication update](https://github.com/FAIR-bioHeaders/fair-bioheaders.github.io/pull/70).
+No concept DOI, key, author order or historical license field is changed by
+this title correction.
 
 ## Licensing
 
