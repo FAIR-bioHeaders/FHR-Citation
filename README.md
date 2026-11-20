@@ -53,8 +53,8 @@ still names *FHR File Converter*. Both retain David Molik then Adam Wright.
 The concept citations above follow those registered titles. The
 [toolkit 0.13.1 version metadata](https://api.datacite.org/dois/10.5281/zenodo.24387470)
 also retains *FHR File Converter*. The current repository/product name does
-not by itself rename a registered bibliographic title. The website's version
-citation is maintained separately in its
+not by itself rename a registered bibliographic title. The website's release and citation metadata
+are maintained separately in its
 [publication update](https://github.com/FAIR-bioHeaders/fair-bioheaders.github.io/pull/70).
 No concept DOI, key, author order or historical license field is changed by
 this title correction.
