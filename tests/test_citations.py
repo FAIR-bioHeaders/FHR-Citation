@@ -2,6 +2,7 @@ import copy
 import json
 from pathlib import Path
 import sys
+import subprocess
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,3 +70,24 @@ class Citations(unittest.TestCase):
         changed.pop("Wright2024")
         with self.assertRaisesRegex(ValueError, "keys"):
             check_consistency(changed, self.manifest, self.readme)
+
+
+class CliFailures(unittest.TestCase):
+    def test_missing_input_reports_concise_failure(self):
+        result = subprocess.run([sys.executable, str(ROOT / "scripts/check_citations.py"),
+                                 "--bib", str(ROOT / "absent-round16.bib")],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("Citation check failed:", result.stderr)
+        self.assertNotIn("Traceback", result.stderr)
+
+    def test_documentation_scope_rejects_non_markdown(self):
+        result = subprocess.run([sys.executable, str(ROOT / "scripts/check_docs.py"),
+                                 str(ROOT / "citation.bib")], capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("expected a Markdown file", result.stderr)
+
+    def test_documentation_root_is_independent_of_working_directory(self):
+        result = subprocess.run([sys.executable, "check_docs.py", "../README.md"],
+                                cwd=ROOT / "scripts", capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

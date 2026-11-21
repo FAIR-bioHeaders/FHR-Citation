@@ -75,7 +75,7 @@ def main():
         records = parse_records(args.bib.read_text(encoding="utf-8"))
         manifest = json.loads((ROOT / "tests/expected-records.json").read_text())
         check_consistency(records, manifest, args.readme.read_text(encoding="utf-8"))
-    except (ValueError, KeyError) as exc:
+    except (ValueError, KeyError, OSError, UnicodeError) as exc:
         parser.exit(1, f"Citation check failed: {exc}\n")
     print(f"Checked {len(records)} citation records and maintained README entries offline.")
     for note in manifest["known_discrepancies"]:
