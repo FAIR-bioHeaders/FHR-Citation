@@ -41,6 +41,42 @@ Read README and LICENSE. Review BibTeX syntax/escaping and compare human and
 machine-readable records after edits; run available repository checks. An
 AGENTS.md-only change needs diff/link review and `git diff --check`.
 
+## Licensing policy
+
+**Software (new project-owned code from March 2025 onward):** MPL-2.0 — the family standard
+for new software contributions. David Molik left USDA in February 2025; contributions before
+that date carry public-domain / PDDL-era terms within the United States. The project's
+`LICENSE` file documents the provenance split between these eras.
+
+**Citation records and bibliography data:** Citation entries (including `citation.bib`) record
+the registered metadata of external artifacts with their original licenses. They do not
+relicense those artifacts. When updating registered titles, DOIs or URLs, verify against
+authoritative sources (DataCite, Crossref, Zenodo) before changing registered records.
+See the [workspace guide](https://github.com/FAIR-bioHeaders/FAIR-bioHeaders-Specification/blob/main/docs/SCHEMA-VERSIONS.md)
+and workspace `AGENTS.md` for licensing policy coordination across the federation.
+
+**Test datasets and generated databases:** ODbL-1.0 (Open Database License) for newly created
+project-owned database collections where the project has authority to grant database rights.
+Reference: <https://opendatacommons.org/licenses/odbl/>.
+
+**Database rights versus content rights:** ODbL licenses the structure, curation and
+compilation of a database — not individual sequences, images, articles, books or other
+constituent works within it. Document the applicable terms for each source's constituent
+material separately.
+
+**Mixed fixtures:** Distinguish (1) newly authored metadata and bibliographic compilation,
+(2) third-party published records, and (3) historical USDA/public-domain material. Do not
+apply a blanket license to a mixed fixture that contradicts any component's terms.
+
+**Preserved material:** Retain historical USDA/public-domain notices, previously distributed
+license permissions, third-party terms and immutable fixture bytes. Copying or compiling
+from third-party sources does not establish ownership or authority to relicense them.
+
+**Uncertainty:** Where rights or ODbL applicability are uncertain, document the specific
+question for maintainer disposition — do not invent permissions, ownership or legal
+conclusions. Flag for review: derived data with unclear upstream authority and newly generated
+datasets built from mixed-license sources.
+
 ## Schema additions and their own development cycle
 
 A new optional field, structured alternative, enum value, constraint, required
